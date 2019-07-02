@@ -39,6 +39,6 @@ When "I guess {string}" do |string|
 end
 
 Then "the mark should be {string}" do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  #pending # Write code here that turns the phrase above into concrete actions
   expect(my_output.messages).to include(string)
 end
