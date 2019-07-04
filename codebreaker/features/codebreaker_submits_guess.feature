@@ -23,9 +23,10 @@ Feature: code-breaker submits guess
   Scenarios: 1 numbers correct
     | code | guess | mark |
     | 1234 | 1555  | +    |
-    | 1234 | 2555  | +    |
-    | 1234 | 3555  | +    |
-    | 1234 | 4555  | +    |
+    | 1234 | 2555  | -    |
+    | 1234 | 5255  | +    |
+    | 1234 | 5535  | +    |
+    | 1234 | 5554  | +    |
 
   Scenarios: 2 numbers correct
     | code | guess | mark |
