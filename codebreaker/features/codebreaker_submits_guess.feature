@@ -27,6 +27,8 @@ Feature: code-breaker submits guess
     | 1234 | 5255  | +    |
     | 1234 | 5535  | +    |
     | 1234 | 5554  | +    |
+    | 1234 | 1111  | +--- |
+    #| 1234 | 2222  | -+-- | --> OFF THE GRID TEST. this will not pass. The algorithm will return  +--- in current version, which looks like the 2 should be placed in position 2 (that's the book algorithm so far. will see if they improve it further down)
 
   Scenarios: 2 numbers correct
     | code | guess | mark |
@@ -47,3 +49,4 @@ Feature: code-breaker submits guess
     | 1234 | 1243  | ++-- |
     | 1234 | 1423  | +--- |
     | 1234 | 4321  | ---- |
+    #| 1234 | 1324  | +--+ | --> OFF THE GRID TEST. Not really how the game works but that would be nice to have a better clue onto which number is actually + and - in the order we typed those in (same issue as above).
