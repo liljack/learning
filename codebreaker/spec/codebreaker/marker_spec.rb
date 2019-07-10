@@ -18,14 +18,14 @@ module Codebreaker
         end
       end
 
-      context "with 1 number  match" do
+      context "with 1 number match" do
         it "return 0" do
           marker = Marker.new('1234', '2555')
           expect(marker.exact_match_count).to eq(0)
         end
       end
 
-      context "with 1 exact amtch and 1 number match" do
+      context "with 1 exact match and 1 number match" do
         it "return 1" do
           marker = Marker.new('1234', '1525')
           expect(marker.exact_match_count).to eq(1)
