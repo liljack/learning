@@ -29,7 +29,7 @@ Feature: code-breaker submits guess
     | 1234 | 5255  | +    |
     | 1234 | 5535  | +    |
     | 1234 | 5554  | +    |
-    | 1234 | 1111  | +--- |
+    | 1234 | 1111  | +    |
     #| 1234 | 2222  | -+-- | --> OFF THE GRID TEST. this will not pass. The algorithm will return  +--- in current version, which looks like the 2 should be placed in position 1 (that's the book algorithm so far. will see if they improve it further down)
 
   Scenarios: 2 numbers correct
