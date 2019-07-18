@@ -64,7 +64,7 @@ module Codebreaker
 
       context "with 1 exact match duplicated in guess" do
         it "returns 0" do
-          pending("refactor number_match_count")
+          #skip("refactor number_match_count") # DON'T use pending with rspec 3. pending will run the test. if the test pass, it will mark it as failed because if it pass, it shouldn't be pending... (weird). So use skip to always skip test. Pending will be skipped only if it fails
           marker = Marker.new('1234', '1155')
           expect(marker.number_match_count).to eq(0)
         end

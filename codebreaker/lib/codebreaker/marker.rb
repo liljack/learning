@@ -9,15 +9,19 @@ class Marker
   end
 
   def total_match_count
-    count = 0
     secret = @secret.split('')
-    @guess.split('').map do |n|
+    @guess.split('').inject(0) do |count, n|
       if secret.include?(n)
-        secret.delete_at(secret.index(n))
-        count += 1
+        delete_first(secret, n)
+        count + 1
+      else
+        count + 0
       end
     end
-    count
+  end
+
+  def delete_first(code,n)
+    code.delete_at(code.index(n))
   end
 
   def exact_match_count
